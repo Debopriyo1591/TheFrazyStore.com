@@ -1,2 +1,0 @@
-# TheFrazyStore.com
-Our Project
