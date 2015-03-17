@@ -6,7 +6,7 @@ class HomeController extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('Common/home.html');
+		$this->load->view('Common/index.html');
 	}
 }
 
