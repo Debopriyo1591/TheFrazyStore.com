@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
+
+.string{
+ float:left;
+  display:block;
+}
+
+.string.inside{
+  position:relative;
+  z-index:99;
+  margin:14px 0 0 -36px;
+}
+
+.label {
+  width: 90px;
+  display:block;
+  float:left;
+  margin:25px 0 0 31px;
+  /*margin-left:62px;
+	position: relative;*/
+	-webkit-perspective: 400px;
+	-moz-perspective: 400px;
+}
+
+.label P{
+  margin:.55em;
+  padding-top:.25em;
+  font-family: 'Gochi Hand';
+  font-weight:bold;
+  color:#444;
+  font-size: 1em;
+  position:relative;
+  z-index:999;
+}
+
+.label .front:before, .label .back:before { 
+  content : ''; 
+  position: absolute; 
+  left: -14px; 
+  top: 5px; 
+  width: 28px; 
+  height: 28px; 
+  border: 1px solid #666; 
+  border-radius: 2px; 
+  border-top-width: 0; 
+  border-right-width: 0; 
+  -webkit-transform: rotate(45deg); 
+  -moz-transform: rotate(45deg); 
+  -o-transform: rotate(45deg); 
+  transform: rotate(45deg);
+}
+
+.label .front:before, .label .back:before, .label .front, .label .back{
+  /*Background Colour*/
+  background: #FAFAFA;  
+}
+
+.label .front:after, .label .back:after { 
+  content: ''; 
+  position: absolute; 
+  left: -10px; 
+  top: 14px; 
+  width: 8px; 
+  height: 8px; 
+  border: 1px solid #797B7B; 
+  border-radius: 10px; 
+}
+
+.label .front, .label .back {
+  float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: inherit;
+	height: inherit;
+	text-align: right;
+  padding:0 5px;
+  border: 1px solid #666; 
+  border-radius: 2px; 
+  border-left-width: 0; 
+  
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+  
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+    
+.label .front,.label .front,.label .back{
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+}
+
+/* -- X axis rotation for tag -- */
+.label:hover .front {
+  -webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+}
+
+.label .back {
+  cursor: pointer;
+	-webkit-transform: rotateX(-180deg);
+	-moz-transform: rotateX(-180deg);
+}
+
+.label:hover .back, .label .front  {
+  -webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
